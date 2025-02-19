@@ -56,6 +56,27 @@ label start:
     
     m "Induljunk hát meg silly osztag😜😝🤪"
 
+    menu: 
+        sz "Hova a manoba indulunk?"
+
+        "Az ovodába":
+            jump ovoda
+        "A flott majdnem nonstop abc és dohányboltba":
+            jump flott
+        "Haza":
+            jump haza
+
+label flott:  
+    scene bg flott
+    with fade 
+
+    show krasz at right
+    k "Ez a hely tele van kasóval😠😡😡"
+    
+
+
+
+    
     # This ends the game.
     
     return
