@@ -1,32 +1,83 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 36, in script
-    show tanner at middle
-  File "game/script.rpy", line 36, in <module>
-    show tanner at middle
-NameError: name 'middle' is not defined
+  File "game/screens.rpy", line 350, in execute
+    screen main_menu():
+  File "game/screens.rpy", line 350, in execute
+    screen main_menu():
+  File "game/screens.rpy", line 365, in execute
+    if gui.show_name:
+  File "game/screens.rpy", line 367, in execute
+    vbox:
+  File "game/screens.rpy", line 371, in execute
+    if not renpy.variant("android"):
+  File "game/screens.rpy", line 373, in execute
+    text "Welcome, [player]":
+NameError: name 'player' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 36, in script
-    show tanner at middle
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1117, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1076, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1076, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 350, in execute
+    screen main_menu():
+  File "game/screens.rpy", line 350, in execute
+    screen main_menu():
+  File "game/screens.rpy", line 365, in execute
+    if gui.show_name:
+  File "game/screens.rpy", line 367, in execute
+    vbox:
+  File "game/screens.rpy", line 371, in execute
+    if not renpy.variant("android"):
+  File "game/screens.rpy", line 373, in execute
+    text "Welcome, [player]":
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\text\text.py", line 2059, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\text\text.py", line 2192, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
   File "D:\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "D:\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 36, in <module>
-    show tanner at middle
-NameError: name 'middle' is not defined
+  File "<none>", line 1, in <module>
+NameError: name 'player' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
-teszt bar 1.0
-Wed Feb 19 14:14:08 2025
+Kasó Kaland 1.0
+Wed Feb 19 15:01:36 2025

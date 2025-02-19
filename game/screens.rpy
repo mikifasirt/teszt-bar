@@ -365,6 +365,9 @@ screen main_menu():
     if gui.show_name:
 
         vbox:
+            xalign 0.05
+            yalign 0.09
+        
             style "main_menu_vbox"
 
             text "[config.name!t]":
@@ -398,6 +401,8 @@ style main_menu_text:
 
 style main_menu_title:
     properties gui.text_properties("title")
+    color "#35CA63"
+    outlines [(2, "#6335CA", 0, 0)]
 
 style main_menu_version:
     properties gui.text_properties("version")

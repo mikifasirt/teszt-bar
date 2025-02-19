@@ -33,7 +33,8 @@ label start:
 
     # These display lines of dialogue.
 
-    sz "heh.. Szóval igaz🙄😪\nKasó tényleg pedó"
+    sz "heh.. Szóval igaz a hír🙄😪"
+    sz "Kasó tényleg pedó😣😰"
 
     show tanner at truecenter
     hide szlevy
@@ -48,12 +49,12 @@ label start:
     hide krasz
     show szlevy at left
 
-    sz "Véget kell vessünk kasó rémuralmának🥺😾"
+    sz "Véget kell vessünk kasó rémuralmának🤠😾"
 
     show tanner at truecenter
     show krasz at right
     
-    m "Induljunk hát meg silly osztag😜😝"
+    m "Induljunk hát meg silly osztag😜😝🤪"
 
     # This ends the game.
     
