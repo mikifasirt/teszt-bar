@@ -10,7 +10,8 @@ image tanner=im.Scale("images/tanner.png",600,1000)
 define sz = Character("Szlevente",color="#39FF14")
 define k = Character("Barna",color="#b5894a")
 define t = Character("Tanner",color="#1E8DE1")
-define m = Character("Mindenki",color="#BEEA15")
+define mindenki = Character("Mindenki",color="#BEEA15")
+define m = Character("Miki Móka", color="#E31C22")
 
 
 
@@ -54,7 +55,7 @@ label start:
     show tanner at truecenter
     show krasz at right
     
-    m "Induljunk hát meg silly osztag😜😝🤪"
+    mindenki "Induljunk hát meg silly osztag😜😝🤪"
 
     menu: 
         sz "Hova a manoba indulunk?"
@@ -72,6 +73,30 @@ label flott:
 
     show krasz at right
     k "Ez a hely tele van kasóval😠😡😡"
+	
+	hide krasz
+	
+	show bolcs miki at right
+	
+	"mysterious elvállt apuka" "Vigyázzanak fiuk nagyon sok erre a pedofil mostanában"
+	"mysterious elvállt apuka" "Ez mint az incidens óta van így"
+	"mysterious elvállt apuka" "Minden 2009. Október 29.-én kezdődött...."
+	
+	hide bolcs miki
+	
+	show tanner at truecenter
+	
+	t "Hallgasson maga sumák!"
+	
+	hide tanner
+	show szlevy at left
+	
+	sz "De tényleg faszi kit érdekel" #itt lehet h kiagazik h mit mondasz de akko szlevy a protagonist
+	
+	
+	
+	
+	
     
 
 
