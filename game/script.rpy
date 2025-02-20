@@ -68,34 +68,6 @@ label start:
             jump haza
 
 label flott:  
-    scene bg flott
-    with fade 
-
-    show krasz at right
-    k "Ez a hely tele van kasóval😠😡😡"
-	
-	hide krasz
-	
-	show bolcs miki at right
-	
-	"mysterious elvállt apuka" "Vigyázzanak fiuk nagyon sok erre a pedofil mostanában"
-	"mysterious elvállt apuka" "Ez mint az incidens óta van így"
-	"mysterious elvállt apuka" "Minden 2009. Október 29.-én kezdődött...."
-	
-	hide bolcs miki
-	
-	show tanner at truecenter
-	
-	t "Hallgasson maga sumák!"
-	
-	hide tanner
-	show szlevy at left
-	
-	sz "De tényleg faszi kit érdekel" #itt lehet h kiagazik h mit mondasz de akko szlevy a protagonist
-	
-	
-	
-	
 	
     
     hide krasz
