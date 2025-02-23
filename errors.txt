@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1: expected statement.
-    ﻿
-     ^
+File "game/script.rpy", line 110: expected statement.
+    "Gyula",color="#E31C22" "Ez tiszta resident evil"
+           ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Feb 20 23:29:12 2025
+Sun Feb 23 18:32:37 2025

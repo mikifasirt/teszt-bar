@@ -6,15 +6,18 @@
 image krasz=im.Scale("images/kraszhappy.png",600,1000)
 image szlevy=im.Scale("images/szlevy.png",600,1000)
 image tanner=im.Scale("images/tanner.png",600,1000)
+image gyula=im.Scale("images/gyula.png",600,1000)
+image edvin=im.Scale("images/edvin.png",600,1000)
+image csongor=im.Scale("images/csongor.png",600,1000)
 
 define sz = Character("Szlevente",color="#39FF14")
 define k = Character("Barna",color="#b5894a")
 define t = Character("Tanner",color="#1E8DE1")
 define mindenki = Character("Mindenki",color="#BEEA15")
 define m = Character("Miki Móka", color="#E31C22")
-
-
-
+define gyula = Character("Gyula", color="#E31C22")
+define edvin= Character("Edvin", color="#BEEA15")
+define csongor= Character("Csongor", color="#27D8C5")
 # The game starts here.
 
 label start:
@@ -68,8 +71,13 @@ label start:
             jump haza
 
 label flott:  
-	
-    
+
+    scene bg flott
+    with fade 
+
+    show krasz at right
+    k "Ez a hely tele van kasóval😠😡😡"
+
     hide krasz
     show bolcs miki at right
     "mysterious elvállt apuka" "Vigyázzanak fiuk nagyon sok erre a pedofil mostanában"
@@ -86,6 +94,33 @@ label flott:
     show szlevy at left
 
     sz "De tényleg faszi kit érdekel" #itt lehet h kiagazik h mit mondasz de akko szlevy a protagonist
+
+    hide szlevy
+    show bolcs miki at right
+
+    "mysterious elvállt apuka" "Vigyázz mögötted!!"
+
+    hide bolcs miki
+    show krasz at right
+    k"Dehogy öttem mög xddd"
+
+    "Barnát eltalálja egy kalapács"
+
+    hide krasz 
+    show gyula at right
+
+    gyula "Ez tiszta resident evil"
+
+    hide gyula 
+    show edvin at left
+    edvin "TISZTELETTT"
+
+    hide edvin
+    show csongor at top
+    csongor "Kussolj már gyula"
+
+
+
 
     # This ends the game.
     
