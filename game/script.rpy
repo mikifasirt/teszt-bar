@@ -9,6 +9,7 @@ image tanner=im.Scale("images/tanner.png",600,1000)
 image gyula=im.Scale("images/gyula.png",600,1000)
 image edvin=im.Scale("images/edvin.png",600,1000)
 image csongor=im.Scale("images/csongor.png",600,1000)
+image bolcs miki=im.Scale("images/bolcsmiki.png",600,1000)
 
 define sz = Character("Szlevente",color="#39FF14")
 define k = Character("Barna",color="#b5894a")
