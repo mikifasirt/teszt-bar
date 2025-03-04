@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 110: expected statement.
-    "Gyula",color="#E31C22" "Ez tiszta resident evil"
-           ^
+File "game/script.rpy", line 22: expected '=' not found.
+    define mysterious elvallt apuka= Character("Mysterious elvállt apuka", color="#E31C86")
+                      ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Feb 23 18:32:37 2025
+Tue Mar  4 17:23:06 2025

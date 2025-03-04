@@ -19,6 +19,7 @@ define m = Character("Miki Móka", color="#E31C22")
 define gyula = Character("Gyula", color="#E31C22")
 define edvin= Character("Edvin", color="#BEEA15")
 define csongor= Character("Csongor", color="#27D8C5")
+define mea= Character("Mysterious elvállt apuka", color="#E31C86")
 # The game starts here.
 
 label start:
@@ -81,9 +82,9 @@ label flott:
 
     hide krasz
     show bolcs miki at right
-    "mysterious elvállt apuka" "Vigyázzanak fiuk nagyon sok erre a pedofil mostanában"
-    "mysterious elvállt apuka" "Ez mint az incidens óta van így"
-    "mysterious elvállt apuka" "Minden 2009. Október 29.-én kezdődött...."
+    mea "Vigyázzanak fiuk nagyon sok erre a pedofil mostanában"
+    mea "Ez mind az incidens óta van így"
+    mea "Minden 2009. Október 29.-én kezdődött...."
 
     hide bolcs miki
 
@@ -99,7 +100,7 @@ label flott:
     hide szlevy
     show bolcs miki at right
 
-    "mysterious elvállt apuka" "Vigyázz mögötted!!"
+    mea "Vigyázz mögötted!!"
 
     hide bolcs miki
     show krasz at right
