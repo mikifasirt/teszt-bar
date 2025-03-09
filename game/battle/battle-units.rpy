@@ -3,10 +3,10 @@
 
 init -2 python:
     class Enemy(store.object):
-        def __init__(self, name, id, info, MAXHP, ATK, DEF, LUC, RES, EXP=0, G=0, drop=None, boss=False):
+        def __init__(self, name, id, MAXHP, ATK, DEF, LUC, RES, EXP=0, G=0, drop=None, boss=False,duma=""):
             self.name=name #enemy name as seen by the player
             self.id=id #string to be used as a codename
-            self.info=info #enemy description
+            
 
             #STATS
             self.MAXHP=MAXHP #base HP value
@@ -22,6 +22,7 @@ init -2 python:
 
             #extra
             self.boss=boss #if True, you can't run away
+            self.duma=duma
 
         # adds enemy to list of seen enemies
         def see_enemy(self):
@@ -30,21 +31,21 @@ init -2 python:
 
 # define your own enemies here!
 define m_goop = Enemy(_("Forest Goop"), "m_goop",
-    info=_("High defense, weak to magic."),
     MAXHP=27, ATK=4, DEF=7, LUC=0, RES=.5,
-    EXP=3, G=2, drop="item_sucker")
+    EXP=3, G=2, drop="item_sucker",duma="branyo buzi")
 
 ##############################################################################
 # Battle transforms
 transform battle_party1:
-    xalign .4
-    yalign .52
+    xalign .45
+    yalign .50
+    zoom 1.5
 transform battle_enemy1:
-    xalign .6
-    yalign .52
+    xalign .58
+    yalign .4
 
 image battle bg = Solid("#c6ffa3")
-image stage bg = Frame("gui/frame.png",4,4, xysize=(700,400), yoffset=-196)
+image stage bg = Frame("gui/frame.png",4,4, xysize=(700,400), yoffset=-400)
 
 ##############################################################################
 # Sprite animations

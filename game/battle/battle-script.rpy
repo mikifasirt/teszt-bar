@@ -69,6 +69,9 @@ label battle_turn:
 
     call screen battle_menu
 
+label battle_duma:
+    enemy.name "[enemy.duma!t]"
+
 label battle_attack:
     # damage calculation
     $ damage = playerATK*4 + atkbuff - enemy.DEF*2
@@ -117,9 +120,9 @@ label battle_damage:
 
     show enemy hit
     if CRIT:
-        bt "NICE HIT!!" with vpunch
+        "Silly gang" "NICE HIT!!" 
     else:
-        bt "TAKE THAT!"
+        "Silly gang" "TAKE THAT!"
     $ CRIT= False
 
 label battle_attack_result:

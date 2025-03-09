@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/items/item-screens.rpy", line 180: keyword argument 'yalign' is incompatible with 'pos'.
-    label "[tooltip!t]" pos (40,20) yalign .96
-                                          ^
+File "game/battle/battle-units.rpy", line 6: non-default argument follows default argument
+        def __init__(self, name, id, info="", MAXHP, ATK, DEF, LUC, RES, EXP=0, G=0, drop=None, boss=False,duma=""):
+                                                      ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Mar  9 09:38:53 2025
+Sun Mar  9 20:28:33 2025

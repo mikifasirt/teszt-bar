@@ -1,22 +1,5 @@
 init offset = -1
 
-## IMPORTANT! ## IF YOU USE THE ITEM SCRIPTS you can take these lines out
-
-# defined in item-screens.rpy
-""'
-transform zoomx(x):
-    zoom x
-    nearest True
-# defined in item-definitions.rpy
-define battle_items = []
-python:
-    def check_inv_for(itemtype):
-        for i in itemtype:
-            if inv.count(i) > 0:
-                return True
-
-## THAT'S ALL! ## had to do this so it'd still work for people only using the battles...
-
 ##############################################################################
 ## battle menu
 
@@ -42,29 +25,9 @@ screen battle_menu():
                 action Jump("battle_defend")
                 tooltip _("Protect yourself! Halves incoming damage.")
 
-            if check_inv_for(battle_items):
-                textbutton _("Item"):
-                    action SetScreenVariable("showbattlemenu", False)
-                    tooltip _("Use your candy creations in battle!")
-
-            if not enemy.boss:
-                textbutton _("Run"):
-                    action Jump("battle_ran")
-                    tooltip _("Escape the encounter and return home.")
-        else:
-            #ITEM MENU
-            if "item_sucker" in inv:
-                button:
-                    add "item sucker" align (.5,.5) at zoomx(2)
-                    action Jump("use_sucker")
-                    tooltip _("Recover HP during battle")
-                # add new items here
-                # only room for 4 at a time with this setup
-
-            textbutton _("Cancel"):
-                action SetScreenVariable("showbattlemenu", True)
-                tooltip _("Close the item menu")
-
+            textbutton _("Duma"):
+                action Jump("battle_duma")
+     
     $ tooltip = GetTooltip()
 
     if tooltip:
@@ -82,15 +45,14 @@ screen battleoverlay():
 
     label _("BATTLE!") style "battle_label" align (.5,.05)
 
-    label _("Turn: [turn]") xalign .75 yalign .1 style "battleinfo_label"
-
     # HP bars
     bar value playerHP range playerMAXHP style "battle_bar" at battle_party1
     bar value enemyHP range enemy.MAXHP style "battle_bar" at battle_enemy1
 
     frame:
         style_group "battleinfo"
-        xalign .025
+        xalign .1
+        yalign 0.5
         vbox:
             hbox:
                 xfill True
@@ -102,37 +64,21 @@ screen battleoverlay():
             else:
                 text _("HP: [playerHP] / [playerMAXHP]") style "battleLOWHP_text"
 
-            frame:
-                style "battleinfo_stat_frame"
-                has vbox
-                if atkbuff:
-                    text "ATK: [playerATK] {color=#ff7c9b}+ [atkbuff]{/color}"
-                else:
-                    text "ATK: [playerATK]"
-                if defbuff:
-                    text "DEF: [playerDEF] {color=#ff7c9b}+ [defbuff]{/color}"
-                else:
-                    text "DEF: [playerDEF]"
-                text "LUC: [playerLUC]"
+
 
     frame:
         style_group "battleinfo"
-        xalign .975
+        xalign .9
+        yalign 0.5
         vbox:
             label "[enemy.name!t]"
             hbox:
                 if enemy.boss:
                     add "bosscrown" yalign .5
                 text _("HP: [enemyHP] / [enemy.MAXHP]") style "battleHP_text"
-            frame:
-                style "battleinfo_stat_frame"
-                has vbox
-                text "ATK: [enemy.ATK]"
-                text "DEF: [enemy.DEF]"
-                text "LUC: [enemy.LUC]"
-
+         
             null height 8
-            text "[enemy.info!t]"
+            
 
 style battle_label_text:
     size 60
@@ -150,12 +96,12 @@ style battle_bar:
     right_bar "hp empty"
     xsize 120
     ysize 10
-    yoffset 90
+    yoffset 110
 
 style battleinfo_frame:
-    xsize 250
-    ysize 320
-    yalign .42
+    xsize 350
+    ysize 200
+    yalign .7
     padding (16,16)
 style battleinfo_vbox:
     spacing 6
@@ -178,12 +124,12 @@ style battleLOWHP_text is battleHP_text:
     outlines [(2,"#bd2c47",0,0)]
 
 style battle_button:
-    background "[prefix_]battle"
-    xysize (200,100)
+    #background "[prefix_]battle"
+    xysize (100,200)
     size_group "battle"
 style battle_button_text:
-    xalign .5
-    idle_color gui.text_color
+    xalign .7
+    idle_color "#31bd2c"
     size gui.label_text_size
 
 

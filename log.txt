@@ -1,37 +1,37 @@
-2025-03-09 08:44:32 UTC
+2025-03-09 19:44:57 UTC
 Windows-10-10.0.19045
 Ren'Py 8.3.4.24120703
 
-Early init took 0.16s
+Early init took 0.21s
 Loading error handling took 0.08s
-Loading script took 0.89s
-Loading save slot metadata took 0.07s
+Loading script took 0.50s
+Loading save slot metadata took 0.08s
 Loading persistent took 0.00s
-Running init code took 0.15s
-Loading analysis data took 0.04s
+Running init code took 0.12s
+Loading analysis data took 0.05s
 Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.06s
+Reloading save slot metadata took 0.07s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Win10\\AppData\\Roaming/RenPy/backups\\teszt bar':
-Dump and make backups took 0.15s
+Dump and make backups took 0.18s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.12s
+Initial gc took 0.13s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.81s
+Creating interface object took 0.78s
 Cleaning stores took 0.00s
 Init translation took 0.09s
 Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.05s
-Prepare screens took 0.23s
+Analyze screens took 0.05s
+Save screen analysis took 0.06s
+Prepare screens took 0.27s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.05s
+Save bytecode. took 0.06s
 Running _start took 0.00s
-Interface start took 0.14s
+Interface start took 0.16s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -41,12 +41,11 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce GTX 1650/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 560.94'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1852, 1042) drawable=(1852, 1042)
+Screen sizes: virtual=(1920, 1080) physical=(1852, 1057) drawable=(1852, 1057)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.09s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+Screen sizes: virtual=(1920, 1080) physical=(1852, 1057) drawable=(1852, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1852, 1057) drawable=(1852, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1852, 1057) drawable=(1852, 1057)
+Maximum texture size: 4096x4096
