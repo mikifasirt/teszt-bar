@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 22: expected '=' not found.
-    define mysterious elvallt apuka= Character("Mysterious elvállt apuka", color="#E31C86")
-                      ^
+File "game/items/item-screens.rpy", line 180: keyword argument 'yalign' is incompatible with 'pos'.
+    label "[tooltip!t]" pos (40,20) yalign .96
+                                          ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Tue Mar  4 17:23:06 2025
+Sun Mar  9 09:38:53 2025

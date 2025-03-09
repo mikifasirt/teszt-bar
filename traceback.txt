@@ -1,23 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 68, in script
-    jump ovoda
-ScriptError: could not find label 'ovoda'.
+  File "game/battle/battle-script.rpy", line 56, in script
+    jump test_menu
+ScriptError: could not find label 'test_menu'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 68, in script
-    jump ovoda
+  File "game/battle/battle-script.rpy", line 56, in script
+    jump test_menu
   File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1705, in execute
     rv = renpy.game.script.lookup(target)
   File "D:\renpy\renpy-8.3.4-sdk\renpy\script.py", line 1103, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'ovoda'.
+ScriptError: could not find label 'test_menu'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
 Kasó
   Kaland 1.0
-Thu Feb 27 17:05:03 2025
+Sun Mar  9 09:42:06 2025

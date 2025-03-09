@@ -2,6 +2,11 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+##############################################################################
+# InvItem class
+
+
+
 
 image krasz=im.Scale("images/kraszhappy.png",600,1000)
 image szlevy=im.Scale("images/szlevy.png",600,1000)
@@ -23,6 +28,60 @@ define mea= Character("Mysterious elvállt apuka", color="#E31C86")
 # The game starts here.
 
 label start:
+
+    python:
+        # disable rollback during battle
+        battling = False
+        renpy.suspend_rollback(battling)
+
+        # battle stats
+        playerLV = 1
+        playerMAXHP = HPvalues[1]
+        playerHP = HPvalues[1]
+        playerATK = ATKvalues[1]
+        playerDEF = DEFvalues[1]
+        playerLUC = LUCvalues[1]
+        playerEXP = 0
+
+        # calculate exp to next level
+        nextEXP = round( 0.04 * (playerLV ** 3) + 0.8 * (playerLV ** 2) + 2 * playerLV)
+        # this formula is from disgaea, apparently!
+        # http://howtomakeanrpg.com/a/how-to-make-an-rpg-levels.html
+
+        # enemy defaults
+        enemyHP = 1
+        seen_enemies = []
+    ##
+
+    ## copy this block into your own game
+    python:
+        gold = 20 #starting amount
+        inv = []
+        seen_items = []
+
+        # crafting
+        known_recipes = []
+        seen_recipes = []
+        made_recipes = []
+        newitem = ""
+
+        # shop inventory
+        market = []
+
+        # quests
+        new_quests = []
+        active_quests = []
+        completed_quests = []
+
+    ## CRAFT/SHOP SETUP
+    $ known_recipes = ["item_sugar", "item_sucker"]
+    $ market = [ "item_water", "item_paper", "item_beet" ]
+
+    ## INVENTORY SETUP
+    $ InvItem(*item_sugar).pickup(3)
+    $ InvItem(*item_water).pickup(2)
+    # $ InvItem(*item_sucker).pickup(1)
+    # $ InvItem(*item_beet).pickup(200)
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -77,6 +136,11 @@ label flott:
     scene bg flott
     with fade 
 
+    call pre_battle
+
+    scene bg flott
+    with fade 
+    
     show krasz at right
     k "Ez a hely tele van kasóval😠😡😡"
 
