@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/battle/battle-units.rpy", line 6: non-default argument follows default argument
-        def __init__(self, name, id, info="", MAXHP, ATK, DEF, LUC, RES, EXP=0, G=0, drop=None, boss=False,duma=""):
-                                                      ^
+File "game/script.rpy", line 181: expected statement.
+    renpy.notify("Griddy emlékezni fog erre")
+                                             ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Mar  9 20:28:33 2025
+Thu Apr  3 22:55:56 2025

@@ -15,6 +15,7 @@ image gyula=im.Scale("images/gyula.png",600,1000)
 image edvin=im.Scale("images/edvin.png",600,1000)
 image csongor=im.Scale("images/csongor.png",600,1000)
 image bolcs miki=im.Scale("images/bolcsmiki.png",600,1000)
+#image griddy
 
 define sz = Character("Szlevente",color="#39FF14")
 define k = Character("Barna",color="#b5894a")
@@ -25,7 +26,10 @@ define gyula = Character("Gyula", color="#E31C22")
 define edvin= Character("Edvin", color="#BEEA15")
 define csongor= Character("Csongor", color="#27D8C5")
 define mea= Character("Mysterious elvállt apuka", color="#E31C86")
+define griddy = Character("Griddy", color="#184888")
 # The game starts here.
+
+
 
 label start:
 
@@ -136,7 +140,6 @@ label flott:
     scene bg flott
     with fade 
 
-    call pre_battle
 
     scene bg flott
     with fade 
@@ -159,36 +162,90 @@ label flott:
     hide tanner
     show szlevy at left
 
-    sz "De tényleg faszi kit érdekel" #itt lehet h kiagazik h mit mondasz de akko szlevy a protagonist
+    menu:
+        "szolj bele":
+            jump szolbel
+        "ne szolj bele":
+            jump neszol
+        "usd meg a griddyt":
+            jump griddy
 
-    hide szlevy
-    show bolcs miki at right
+    label griddy:
+        show szlevy at left
+        sz "Na jó, de ha már itt vagyunk, akkor csináljunk valamit"
+        show griddy at right
+        griddy "legyszi Szlevente József, ne verj meg leccike"
+        sz"Késő már griddy urfi"
+        "Meguti a griddyt"
+        #animacio stickfigure szlevy griddy
+        $ renpy.notify("Griddy emlékezni fog erre")
+        sz "Hát ez nem volt valami okos döntés"
+        sz "De mindegy, most már úgysem számit{cps=/5}....{/cps}"
+        "Lehajtott fejjel a flott majdnem nonstop abc és dohányboltba megy a gang"
+        jump flottben
 
-    mea "Vigyázz mögötted!!"
+    label szolbel:
+        show szlevy at left
+        show bolcs miki at right
+        sz"igaza van a kurva anyad te igenytelen palko"
+        show tanner at truecenter
+        t "nekem mindig az van fiam"
+        hide tanner
+        hide szlevy
+        mea "jo de amugy van aprotok haversracok"
+        sz"nem tudom de a kasóval nem szívesen találkoznék"
+        show gyula
+        gyula "itt van 13 forint de csak ha feher monsterre költöd"
+        gyula "#saveeurope"
+        sz "Jó hagyjuk ezeket az edgy fiukakat"
+        "Befáradtok a flott majdnem nonstop abc és dohányboltba"
+        jump flottben
+    label neszol:
+        "Nem szólsz bele"
+        $ renpy.notify("Tanner emlékezni fog erre")
+        hide szlevy
+        "Kínos csend"
+        "{cps=/4}.....{/cps}"
+        show bolcs miki at right
 
-    hide bolcs miki
-    show krasz at right
-    k"Dehogy öttem mög xddd"
+        mea "Vigyázz mögötted!!"
 
-    "Barnát eltalálja egy kalapács"
+        hide bolcs miki
+        show krasz at right
+        k"Dehogy öttem mög xddd"
 
-    hide krasz 
-    show gyula at right
+        "Barnát eltalálja egy kalapács"
 
-    gyula "Ez tiszta resident evil"
+        hide krasz 
+        show gyula at right
 
-    hide gyula 
-    show edvin at left
-    edvin "TISZTELETTT"
+        gyula "Ez tiszta resident evil"
 
-    hide edvin
-    show csongor at top
-    csongor "Kussolj már gyula"
+        hide gyula 
+        show edvin at left
+        edvin "TISZTELETTT"
 
-
-
-
-    # This ends the game.
-    
+        hide edvin
+        show csongor at top
+        csongor "Kussolj már gyula"
     return
+
+    label flottben:
+        show tanner at truecenter
+        t "Na most már elég volt a hülyeségekből"
+        hide tanner
+        show bolcs miki at right
+        mea "A kasó nem fogja megölni magát"
+        hide bolcs miki
+        show krasz at right
+        k "Dehogy fogja"
+        hide krasz 
+        show edvin at left
+        edvin "TISZTELETTT"
+        hide edvin
+        show gyula at right
+        gyula "Ez tiszta resident evil"
+        hide gyula
+    
+
     
