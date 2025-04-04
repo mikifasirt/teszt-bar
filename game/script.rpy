@@ -27,6 +27,7 @@ define edvin= Character("Edvin", color="#BEEA15")
 define csongor= Character("Csongor", color="#27D8C5")
 define mea= Character("Mysterious elvállt apuka", color="#E31C86")
 define griddy = Character("Griddy", color="#184888")
+define any = Character("2 gyerekes elvállt anyuka", color="#DC1CE3")
 # The game starts here.
 
 
@@ -149,55 +150,68 @@ label flott:
 
     hide krasz
     show bolcs miki at right
-    mea "Vigyázzanak fiuk nagyon sok erre a pedofil mostanában"
-    mea "Ez mind az incidens óta van így"
-    mea "Minden 2009. Október 29.-én kezdődött...."
+    mea "Vigyázzanak fiúk😣 nagyon sok erre a pedofil mostanában🤕"
+    mea "Ez mind az incidens óta van így🤓☝️"
+    mea "Minden 2009. Október 29.-én kezdődött{cps=5}....{/cps}🥸"
 
     hide bolcs miki
 
     show tanner at truecenter
 
-    t "Hallgasson maga sumák!"
+    t "Hallgasson maga sumák!🤬😡🤬"
 
     hide tanner
     show szlevy at left
 
     menu:
-        "szolj bele":
+        "szólj bele":
             jump szolbel
-        "ne szolj bele":
+        "ne szólj bele":
             jump neszol
-        "usd meg a griddyt":
+        "üsd meg a griddyt":
             jump griddy
 
     label griddy:
         show szlevy at left
-        sz "Na jó, de ha már itt vagyunk, akkor csináljunk valamit"
+        sz "Na jó, de ha már itt vagyunk, akkor csináljunk valamit🤓☝️"
         show griddy at right
-        griddy "legyszi Szlevente József, ne verj meg leccike"
-        sz"Késő már griddy urfi"
-        "Meguti a griddyt"
+        griddy "légyszi Szlevente József, ne verj meg léccike fr👉👈"
+        hide szlevy
+        show tanner at truecenter
+        t"a légy nem is szives😢🙁"
+        hide tanner
+        show szlevy at left
+        sz"Késő már griddy úrfi😡"
+        "Megüti a griddyt😞"
         #animacio stickfigure szlevy griddy
         $ renpy.notify("Griddy emlékezni fog erre")
-        sz "Hát ez nem volt valami okos döntés"
-        sz "De mindegy, most már úgysem számit{cps=/5}....{/cps}"
+        sz "Hát ez nem volt valami okos döntés😨"
+        sz "😤De mindegy, most már úgysem számit{cps=2}....{/cps}"
         "Lehajtott fejjel a flott majdnem nonstop abc és dohányboltba megy a gang"
         jump flottben
 
     label szolbel:
         show szlevy at left
         show bolcs miki at right
-        sz"igaza van a kurva anyad te igenytelen palko"
+        sz"igaza van a kurva anyád te igénytelen palkó😠🥺"
         show tanner at truecenter
-        t "nekem mindig az van fiam"
+        t "nekem mindig az van fiam😎😎"
         hide tanner
         hide szlevy
         mea "jo de amugy van aprotok haversracok"
+        show szlevy at left
         sz"nem tudom de a kasóval nem szívesen találkoznék"
-        show gyula
+        mea "mi a manorol dumalsz faszilada"
+        "megdobja majonézzel"
+        mea "akkor menjetek a herembe kinda..."
+        sz" ez nem is volt olyan rossz"
+        hide szlevy
+        show gyula at left:
+            xzoom -1
         gyula "itt van 13 forint de csak ha feher monsterre költöd"
-        gyula "#saveeurope"
-        sz "Jó hagyjuk ezeket az edgy fiukakat"
+        gyula "Mentsük meg európát"
+        mea " ohh... >_<"
+        "hagyjátok szenvedni" #lehet itt is menu
         "Befáradtok a flott majdnem nonstop abc és dohányboltba"
         jump flottben
     label neszol:
@@ -205,10 +219,10 @@ label flott:
         $ renpy.notify("Tanner emlékezni fog erre")
         hide szlevy
         "Kínos csend"
-        "{cps=/4}.....{/cps}"
+        "{cps=2}.....{/cps}"
         show bolcs miki at right
 
-        mea "Vigyázz mögötted!!"
+        mea "Vigyazz mogotted!!"
 
         hide bolcs miki
         show krasz at right
@@ -231,6 +245,8 @@ label flott:
     return
 
     label flottben:
+        show bg petofront
+        with fade
         show tanner at truecenter
         t "Na most már elég volt a hülyeségekből"
         hide tanner

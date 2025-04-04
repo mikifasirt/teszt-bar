@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 181: expected statement.
-    renpy.notify("Griddy emlékezni fog erre")
-                                             ^
+File "game/gui.rpy", line 38: unexpected EOF while parsing
+    '#c184ff'*
+              ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Apr  3 22:55:56 2025
+Fri Apr  4 09:35:06 2025
